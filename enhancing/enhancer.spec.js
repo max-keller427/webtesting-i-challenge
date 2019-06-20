@@ -68,6 +68,12 @@ describe("the fail function", () => {
       enhancement: 16
     };
 
+    const longSword = {
+      name: "long sword",
+      durability: 1,
+      enhancement: 20
+    };
+
     //failed
     const failedStaff = {
       name: "staff",
@@ -93,9 +99,16 @@ describe("the fail function", () => {
       enhancement: 16
     };
 
+    const failedLongSword = {
+      name: "long sword",
+      durability: 1,
+      enhancement: 19
+    };
+
     expect(fail(staff)).toEqual(failedStaff);
     expect(fail(scimitar)).toEqual(failedScimitar);
     expect(fail(shortSword)).toEqual(failedShortSword);
     expect(fail(mace)).toEqual(failedMace);
+    expect(fail(longSword)).toEqual(failedLongSword);
   });
 });

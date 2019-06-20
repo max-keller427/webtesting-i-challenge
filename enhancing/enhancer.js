@@ -49,19 +49,11 @@ function fail(item) {
       enhancement: item.enhancement
     };
     return newItem;
-  } else {
-    if (item.durability === 0) {
-      const newItem = {
-        name: item.name,
-        durability: 0,
-        enhancement: item.enhancement
-      };
-      return newItem;
-    }
+  } else if (item.enhancement > 16) {
     const newItem = {
       name: item.name,
-      durability: item.durability - 1,
-      enhancement: item.enhancement
+      durability: item.durability,
+      enhancement: item.enhancement - 1
     };
     return newItem;
   }
